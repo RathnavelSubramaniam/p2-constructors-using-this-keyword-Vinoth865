@@ -1,9 +1,11 @@
-class Product {
+class Product 
+{
     int productId;
     String productName;
     double price;
     static int count = 0;
-    Product() {
+    Product()
+    {
         productName = null;
     }
     Product(int productId, String productName, double price) {
@@ -12,18 +14,22 @@ class Product {
         this.price = price;
         count++;
     }
-    double discount(double price, double discountPercentage) {
+    double discount(double price, double discountPercentage) 
+    {
         return ((100 - discountPercentage) / 100) * price;
     }
-    void displayProductInfo() {
+    void displayProductInfo() 
+    {
         System.out.println("Product Id: " + productId);
         System.out.println("Product Name: " + productName);
         System.out.println("Product Price: " + price);
     }
 }
 
-public class Practical2 {
-    public static void main(String[] args) {
+public class Practical2 
+{
+    public static void main(String[] args)
+     {
         Product product1 = new Product(101, "Laptop", 999.99);
         Product product2 = new Product(202, "SmartPhone", 499.95);
         Product product3 = new Product(303, "Tablet", 299.50);
